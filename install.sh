@@ -1,10 +1,14 @@
 #!/bin/sh
 
+echo 'What file (For example: "todo.txt") should I print to the console?'
+read filename
+
+
 echo '''
 function cd() {
     builtin cd "$@" 
-    if [ -f "todo" ]; then
-        cat todo
+    if [ -f "${filename}" ]; then
+        cat ${filename}
     fi
 }
 
