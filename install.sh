@@ -18,7 +18,7 @@ function cd() {
     fi
 }
 
-export -f cd
+export cd
 
 ### End Of ShellAutoCat ###
 
