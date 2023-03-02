@@ -1,5 +1,7 @@
 # ShellAutoCat
 
+![Preview picture](preview.png)
+
 This script adds to your .\*shrc the auto output of the file you need (if it exists in the directory) when starting your \*sh and when changing the directory.
 
 ## Instalation:
