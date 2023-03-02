@@ -8,6 +8,9 @@ read shell
 
 echo '''
 
+### Start Of ShellAutoCat ###
+
+
 function cd() {
     builtin cd "$@" 
     if [ -f "${filename}" ]; then
@@ -15,6 +18,8 @@ function cd() {
     fi
 }
 
-
 export -f cd
+
+### End Of ShellAutoCat ###
+
 ''' >> ~/.${shell}rc
