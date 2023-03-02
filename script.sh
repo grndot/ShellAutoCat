@@ -1,6 +1,12 @@
 #!/bin/sh
 
 
-if [ -f "todo" ]; then
-    cat todo
-fi
+function cd() {
+    builtin cd "$@" 
+    if [ -f "todo" ]; then
+        cat todo
+    fi
+}
+
+
+export -f cd
