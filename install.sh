@@ -6,21 +6,20 @@ read filename
 echo 'Which shell (sh, bash, zsh, fish and etc.) does this terminal use?'
 read shell
 
-echo "
+echo '''
+
 ### Start Of ShellAutoCat ###
 
+
 function cd() {
-    builtin cd \"\$@\" 
-    if [ -f $filename ]; then
-        cat $filename
+    builtin cd "$@" 
+    if [ -f "${filename}" ]; then
+        cat ${filename}
     fi
 }
 
 export cd
 
-if [ -f $filename ]; then
-    cat $filename
-fi
-
 ### End Of ShellAutoCat ###
-" >> ~/.${shell}rc
+
+''' >> ~/.${shell}rc
