@@ -7,6 +7,7 @@ echo 'Which shell (sh, bash, zsh, fish and etc.) does this terminal use?'
 read shell
 
 echo '''
+
 function cd() {
     builtin cd "$@" 
     if [ -f "${filename}" ]; then
