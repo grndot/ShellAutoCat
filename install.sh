@@ -3,6 +3,8 @@
 echo 'What file (For example: "todo.txt") should I print to the console?'
 read filename
 
+echo 'Which shell (sh, bash, zsh, fish and etc.) does this terminal use?'
+read shell
 
 echo '''
 function cd() {
@@ -14,4 +16,4 @@ function cd() {
 
 
 export -f cd
-''' >> ~/.zshrc
+''' >> ~/.${shell}rc
